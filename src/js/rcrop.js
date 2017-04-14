@@ -1526,13 +1526,15 @@ function Draggable(el, options){
     
     //drag
     var mousemove = function (e) {
-        if (!move)
+        if (!move){
             return;
+        }
 
         e.preventDefault();
 
-        if (e.originalEvent.touches && e.originalEvent.touches.length == 1)
+        if (e.originalEvent.touches && e.originalEvent.touches.length == 1){
             var e = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+        }
 
 
         if (first) {
@@ -1541,11 +1543,13 @@ function Draggable(el, options){
             var p = self.el.parent();
             self.initPos.parent = p;
 
-            if(self.settings.overflow)
+            if(self.settings.overflow){
                 self.appendTo(self.tempContainer, self.draggableBox);
+            }
             
-            if(self.settings.ghost)
+            if(self.settings.ghost){
                 updateGhost(e);
+            }
 
             
             self.x = e.pageX;
@@ -1589,8 +1593,9 @@ function Draggable(el, options){
 
         self.fixDeltasWithBounderies();
 
-        if (self.settings.move || self.settings.ghost)
+        if (self.settings.move || self.settings.ghost){
             self.move();
+        }
 
         //trigger event clayfy-drag and callback
         self.settings.drag.call(self, e);
