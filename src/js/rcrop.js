@@ -1466,7 +1466,7 @@ function Draggable(el, options){
             return;
         }
         
-        if(typeof e.which !== 'undefined' && e.which !== 1){
+        if(typeof e.which === 'number' && e.which > 1){
             return;
         }
          
