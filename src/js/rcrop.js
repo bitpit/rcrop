@@ -1462,19 +1462,24 @@ function Draggable(el, options){
     };
 
     var mousedown = function (e) {
-        if (notDraggable.is(e.target) || (self.el.has(e.target).length && !self.settings.propagate))
+        if (notDraggable.is(e.target) || (self.el.has(e.target).length && !self.settings.propagate)){
             return;
-        if(typeof e.which !== 'undefined' && e.which !== 1)
+        }
+        
+        if(typeof e.which !== 'undefined' && e.which !== 1){
             return;
+        }
          
         e.preventDefault();
                 
-        if(!isOverContent(e))
+        if(!isOverContent(e)){
             return;
+        }
         
         
-        if(self.settings.coverScreen)
+        if(self.settings.coverScreen){
             coverScreen(); //cover screen with layer for easily drag all over the screen
+        }
         
         move = true;
         document.body.style.cursor = cursor;
