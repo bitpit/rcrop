@@ -1530,12 +1530,13 @@ function Draggable(el, options){
             return;
         }
 
-        e.preventDefault();
-
         if (e.originalEvent.touches && e.originalEvent.touches.length == 1){
             var e = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
         }
 
+        if (e.preventDefault) {
+            e.preventDefault();
+        }
 
         if (first) {
             first = false;
