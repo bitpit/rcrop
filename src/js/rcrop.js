@@ -1940,6 +1940,9 @@ function Resizable(el, options){
             self.el.on('clayfy-resizeend clayfy-drop', function(){
                 self.el.trigger('click');
             });
+            setTimeout(function() {
+                self.updateHandlersPosition();               
+            });
         }
     };
     
