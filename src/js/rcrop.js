@@ -2044,6 +2044,9 @@ function Resizable(el, options){
         }
     };
     this.hideHandlers = function () {
+        if (self.touchableDevice) {
+            return;
+        }
         if(self.status !== 'ready')
             return;
         $.each(self.handlers, function (i, handler) {
@@ -2052,6 +2055,9 @@ function Resizable(el, options){
         insideBox = false;
     };
     this.showHandlers = function(){
+        if (self.touchableDevice) {
+            return;
+        }
         if(insideBox || self.status !== 'ready')
             return;
         $.each(self.handlers, function (i, handler) {
