@@ -2403,8 +2403,9 @@ function Sortable(el , options){
         setContext();
         
         self.el.on('mousedown touchstart', function(e){
-            if(e.type=== 'mousedown' && e.which !== 1)
+            if(e.type=== 'mousedown' && e.which > 1){
                 return;
+            }
             beforeDragstart();
             self.draggableBox.trigger($.Event(e.type, e)); //trigger for start dragging. Pass original event when trigger
         });
