@@ -234,6 +234,7 @@ $break-small : 600px;
 }
 
 
+$rcropPrefix: $prefix;
 $prefix : 'clayfy';
 
 .#{$prefix}-box{
@@ -293,4 +294,17 @@ $prefix : 'clayfy';
     border : 2px solid #ccc
 }
 
+.#{$prefix}-touch-device #{$rcropPrefix}handler-wrapper {
+
+    $bottomRightSel: #{$rcropPrefix}handler-bottom-right;
+
+    div:not(#{$bottomRightSel}) {
+        display: none;
+    }
+
+    #{$bottomRightSel} {
+        width: 14px;
+        height: 14px;
+    }
+}
 

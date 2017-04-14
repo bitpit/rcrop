@@ -2212,6 +2212,8 @@ function ResizableHandler(position, resizable){
     //Public Methods
     this.updatePosition = function () {
         var s = resizable.newSize;
+        var handleDim = 8;
+        var bottomRightDim = 14;
 
         switch (self.position) {
             case 'left' :
@@ -2228,16 +2230,16 @@ function ResizableHandler(position, resizable){
                 break;
                 //    
             case 'top left' :
-                self.el.css({width: 8, height: 8, left: s.left, top: s.top});
+                self.el.css({width: handleDim, height: handleDim, left: s.left, top: s.top});
                 break;
             case 'top right' :
-                self.el.css({width: 8, height: 8, left: s.right - 8, top: s.top});
+                self.el.css({width: handleDim, height: handleDim, left: s.right - handleDim, top: s.top});
                 break;
             case 'bottom left' :
-                self.el.css({width: 8, height: 8, left: s.left, top: s.bottom - 8});
+                self.el.css({width: handleDim, height: handleDim, left: s.left, top: s.bottom - handleDim});
                 break;
             case 'bottom right' :
-                self.el.css({width: 8, height: 8, left: s.right - 8, top: s.bottom - 8});
+                self.el.css({width: bottomRightDim, height: bottomRightDim, left: s.right - handleDim, top: s.bottom - handleDim});
                 break;
 
         }
