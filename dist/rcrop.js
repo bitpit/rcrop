@@ -2213,7 +2213,7 @@ function ResizableHandler(position, resizable){
     this.updatePosition = function () {
         var s = resizable.newSize;
         var handleDim = 8;
-        var bottomRightDim = 14;
+        var bottomRightDim = 20;
 
         switch (self.position) {
             case 'left' :
