@@ -235,6 +235,7 @@ $break-small : 600px;
 
 
 $rcropPrefix: $prefix;
+$bottomRHandlerDims: 20px;
 $prefix : 'clayfy';
 
 .#{$prefix}-box{
@@ -303,8 +304,8 @@ $prefix : 'clayfy';
     }
 
     #{$bottomRightSel} {
-        width: 14px;
-        height: 14px;
+        width: #{$bottomRHandlerDims};
+        height: #{$bottomRHandlerDims};
     }
 }
 
