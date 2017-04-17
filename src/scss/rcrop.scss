@@ -24,82 +24,6 @@ $break-small : 600px;
             box-sizing: border-box;
         }
         
-       /*
-        #{$prefix}handler{
-            position: absolute;
-            width: $handlerSize;
-            height: $handlerSize;
-            z-index:1001;
-           
-            &:after{
-               content: "";
-               background: rgba(0,0,0,.5);
-               border : 1px solid rgba(255,255,255,.5);
-               position:absolute;
-               width: $handlerAfterSize;
-               height : $handlerAfterSize;
-               top: 50%;
-               margin-top: -$handlerAfterSize/2;
-               left: 50%;
-               margin-left: -$handlerAfterSize/2;
-               @include box-sizing(border-box);
-            }
-            
-            &#{$prefix}handler-top{
-                top: -$handlerSize/2;
-                left: 50%;
-                margin-left: -$handlerSize/2;
-                cursor : n-resize;
-            }
-            &#{$prefix}handler-top-left{
-                top: -$handlerSize/2;
-                left: -$handlerSize/2;
-                cursor : nw-resize;
-            }
-            &#{$prefix}handler-top-right{
-                top: -$handlerSize/2;
-                right: -$handlerSize/2;
-                cursor : ne-resize;
-            }
-            &#{$prefix}handler-left{
-                margin-top: -$handlerSize/2;
-                top:50%;
-                left: -$handlerSize/2;
-                cursor : w-resize;
-            }
-            &#{$prefix}handler-right{
-                margin-top: -$handlerSize/2;
-                top:50%;
-                right: -$handlerSize/2;
-                cursor : e-resize;
-            }
-            &#{$prefix}handler-bottom{
-                bottom: -$handlerSize/2;
-                left: 50%;
-                margin-left: -$handlerSize/2;
-                cursor : s-resize;
-            }
-            &#{$prefix}handler-bottom-left{
-                bottom: -$handlerSize/2;
-                left: -$handlerSize/2;
-                cursor : sw-resize;
-            }
-            &#{$prefix}handler-bottom-right{
-                bottom: -$handlerSize/2;
-                right: -$handlerSize/2;
-                cursor : se-resize;
-                &:after{
-                    @media screen and (max-width: $break-small) {
-                        height : $handlerAfterSize * 2;
-                        width : $handlerAfterSize * 2;
-                        margin-left: -$handlerAfterSize;
-                        margin-top : -$handlerAfterSize;
-                    }
-                }
-            }
-        }
-        */
-        
     }
     #{$prefix}outer-wrapper{
         opacity: 0.5;
@@ -258,16 +182,6 @@ $prefix : 'clayfy';
         cursor: n-resize;
         &.left{
             cursor: nw-resize;
-            /*
-            &:before{
-                content: '';
-                position: absolute;
-                top:0; left:0;
-                height: 100%; width: 100%;
-                border-top: 1px solid #000;
-                border-left: 1px solid #000;
-            }
-            */
         }
         &.right{
             cursor: ne-resize;
