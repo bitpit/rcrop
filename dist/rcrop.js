@@ -23,7 +23,7 @@
 
     };
     
-    ResponsiveCrop = function (el, options) {
+    var ResponsiveCrop = function (el, options) {
         
         //private properties
         var self = this,

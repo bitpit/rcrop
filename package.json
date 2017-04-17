@@ -1,6 +1,6 @@
 {
   "name": "rcrop",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Responsive cropper jQuery plugin",
   "main": "dist/rcrop.js",
   "scripts": {
