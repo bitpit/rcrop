@@ -2239,7 +2239,7 @@ function ResizableHandler(position, resizable){
                 self.el.css({width: handleDim, height: handleDim, left: s.left, top: s.bottom - handleDim});
                 break;
             case 'bottom right' :
-                self.el.css({width: bottomRightDim, height: bottomRightDim, left: s.right - handleDim, top: s.bottom - handleDim});
+                self.el.css({width: bottomRightDim, height: bottomRightDim, left: s.right - bottomRightDim, top: s.bottom - bottomRightDim});
                 break;
 
         }
