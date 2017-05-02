@@ -141,10 +141,13 @@
 .clayfy-sort-droparea {
   border: 2px solid #ccc; }
 
-.clayfy-touch-device .rcrop-handler-wrapper div:not(.rcrop-handler-bottom-right) {
+.clayfy-touch-device .rcrop-handler-wrapper div {
   display: none; }
 
-.clayfy-touch-device .rcrop-handler-wrapper .rcrop-handler-bottom-right {
+.clayfy-touch-device .rcrop-handler-wrapper .rcrop-handler-bottom-right, .clayfy-touch-device .rcrop-handler-wrapper .rcrop-handler-top-left {
+  display: block; }
+
+.clayfy-touch-device .rcrop-handler-wrapper .rcrop-handler-bottom-right, .clayfy-touch-device .rcrop-handler-wrapper .rcrop-handler-top-left {
   width: 27px;
   height: 27px; }
 
