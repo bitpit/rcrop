@@ -2230,7 +2230,7 @@ function ResizableHandler(position, resizable){
                 break;
                 //    
             case 'top left' :
-                self.el.css({width: handleDim, height: handleDim, left: s.left, top: s.top});
+                self.el.css({width: bottomRightDim, height: bottomRightDim, left: s.left - 2, top: s.top - 2 });
                 break;
             case 'top right' :
                 self.el.css({width: handleDim, height: handleDim, left: s.right - handleDim, top: s.top});
