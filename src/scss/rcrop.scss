@@ -212,12 +212,17 @@ $prefix : 'clayfy';
 .#{$prefix}-touch-device #{$rcropPrefix}handler-wrapper {
 
     $bottomRightSel: #{$rcropPrefix}handler-bottom-right;
+    $topRightSel: #{$rcropPrefix}handler-top-left;
 
-    div:not(#{$bottomRightSel}) {
+    div {
         display: none;
     }
 
-    #{$bottomRightSel} {
+    #{$bottomRightSel}, #{$topRightSel} {//, div:not(#{$topRightSel}) {
+        display: block;
+    }
+
+    #{$bottomRightSel}, #{$topRightSel} {
         width: #{$bottomRHandlerDims};
         height: #{$bottomRHandlerDims};
     }
